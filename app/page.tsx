@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+const basePath = process.env.GITHUB_ACTIONS === "true" ? "/convenient-care-automotive" : "";
+
 const services = [
   {
     number: "01",
@@ -31,7 +33,7 @@ export default function Home() {
         <a className="neo-brand" href="#top" aria-label="Convenient Care Automotive home">
           <span className="neo-brand-logo">
             <Image
-              src="/convenient-care-logo.webp"
+              src={`${basePath}/convenient-care-logo.webp`}
               alt="Convenient Care Automotive logo"
               width={56}
               height={56}
@@ -50,7 +52,7 @@ export default function Home() {
           <a href="#contact"><span>03</span> Contact</a>
         </nav>
         <div className="neo-header-ase" aria-label="ASE Certified Mechanic">
-          <Image src="/ase-official-logo.png" alt="Official ASE logo" width={42} height={42} unoptimized />
+          <Image src={`${basePath}/ase-official-logo.png`} alt="Official ASE logo" width={42} height={42} unoptimized />
           <span><strong>ASE Certified</strong><small>Mechanic</small></span>
         </div>
         <a className="neo-header-cta" href="#contact">
@@ -100,7 +102,7 @@ export default function Home() {
                 <span className="neo-target neo-target-two" />
                 <span className="neo-logo-scan" />
                 <Image
-                  src="/convenient-care-logo.webp"
+                  src={`${basePath}/convenient-care-logo.webp`}
                   alt="Convenient Care Automotive"
                   width={720}
                   height={720}
@@ -253,7 +255,7 @@ export default function Home() {
       <footer className="neo-footer">
         <div className="neo-footer-brand"><span className="neo-brand-mark">CC</span><span><strong>Convenient Care Automotive</strong><small>Modern care. Clear answers.</small></span></div>
         <div className="neo-footer-ase" aria-label="ASE Certified Mechanic">
-          <Image src="/ase-official-logo.png" alt="Official ASE logo" width={50} height={50} unoptimized />
+          <Image src={`${basePath}/ase-official-logo.png`} alt="Official ASE logo" width={50} height={50} unoptimized />
           <span><strong>ASE Certified Mechanic</strong><small>Professional automotive expertise</small></span>
         </div>
         <a href="#top">Back to top <span>↑</span></a>
